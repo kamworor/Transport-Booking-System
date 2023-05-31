@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="image-container">
+    <img src="{% static 'images/tip.jpg' %}" alt="Example Image">
+    <div class="arrow left" onclick="switchImage(-1)">&#8592;</div>
+    <div class="arrow right" onclick="switchImage(1)">&#8594;</div>
+  </div>
+  
+{% endblock content %}

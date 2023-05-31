@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Management System</title>
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    {% block content %}
+    
+    <div class="image-container">
+        <img src="{% static 'images/tip.jpg' %}" alt="Example Image">
+        <div class="arrow left" onclick="switchImage(-1)">&#8592;</div>
+        <div class="arrow right" onclick="switchImage(1)">&#8594;</div>
+    </div>
+
+    {% endblock %}
+    {% include 'footer.html' %}
+</body>
+</html>
